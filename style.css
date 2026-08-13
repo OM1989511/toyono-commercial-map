@@ -1,1872 +1,1305 @@
-/* ===================================
-   ROOT
-=================================== */
+<!DOCTYPE html>
+<html lang="ja">
 
-:root {
+<head>
 
-    --green: #789477;
+    <meta charset="UTF-8">
 
-    --green-dark: #536654;
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    --orange: #e99a6a;
+    <meta
+        name="description"
+        content="豊能町商工会青年部が企画する豊能町商業マップ。豊能町内のお店や事業所の掲載店舗を募集しています。"
+    >
 
-    --yellow: #f3d98b;
+    <title>豊能町商業マップ｜掲載店舗募集</title>
 
-    --cream: #fffdf7;
 
-    --beige: #f6f0e4;
+    <!-- Google Fonts -->
 
-    --light-green: #f1f6ed;
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    --text: #4f554f;
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-    --muted: #7c837d;
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
 
-    --white: #ffffff;
 
-}
+    <!-- CSS -->
 
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
-/* ===================================
-   RESET
-=================================== */
+</head>
 
-* {
-    box-sizing: border-box;
-}
 
-html {
-    scroll-behavior: smooth;
-}
+<body>
 
-body {
 
-    margin: 0;
+<!-- =========================================
+     HEADER
+========================================= -->
 
-    font-family:
-        "Noto Sans JP",
-        sans-serif;
+<header class="site-header">
 
-    color: var(--text);
+    <div class="header-inner">
 
-    background: var(--cream);
 
-    line-height: 1.8;
+        <a
+            href="#top"
+            class="site-logo"
+        >
 
-    -webkit-font-smoothing: antialiased;
+            <span class="logo-main">
+                豊能町商工会青年部
+            </span>
 
-}
+            <span class="logo-sub">
+                TOYONO TOWN CHAMBER OF COMMERCE
+            </span>
 
-img {
-    max-width: 100%;
-}
+        </a>
 
-a {
-    color: inherit;
-}
 
-.container {
+        <a
+            href="#apply"
+            class="header-button"
+        >
+            掲載を申し込む
+        </a>
 
-    width:
-        min(
-            1080px,
-            calc(100% - 40px)
-        );
 
-    margin: 0 auto;
+    </div>
 
-}
+</header>
 
-.section {
 
-    padding:
-        72px 0;
 
-}
+<!-- =========================================
+     HERO
+========================================= -->
 
+<main id="top">
 
-/* ===================================
-   HEADER
-=================================== */
 
-.site-header {
+<section class="hero">
 
-    position: sticky;
 
-    top: 0;
+    <!-- 自然装飾 -->
 
-    z-index: 100;
+    <div class="nature-decoration leaf-left">
+        🌿
+    </div>
 
-    background:
-        rgba(
-            255,
-            253,
-            247,
-            .94
-        );
+    <div class="nature-decoration leaf-right">
+        🌿
+    </div>
 
-    backdrop-filter:
-        blur(12px);
 
-    border-bottom:
-        1px solid
-        rgba(
-            83,
-            102,
-            84,
-            .08
-        );
+    <div class="hero-inner">
 
-}
 
-.header-inner {
+        <!-- LEFT -->
 
-    width:
-        min(
-            1080px,
-            calc(100% - 40px)
-        );
+        <div class="hero-copy reveal">
 
-    min-height: 70px;
 
-    margin: auto;
+            <p class="eyebrow">
 
-    display: flex;
+                豊能町商工会青年部 PRESENTS
 
-    align-items: center;
+            </p>
 
-    justify-content:
-        space-between;
 
-    gap: 20px;
+            <h1>
 
-}
+                豊能町<br>
 
-.site-logo {
+                <span>商業マップ</span>
 
-    text-decoration: none;
+            </h1>
 
-    color:
-        var(--green-dark);
 
-}
+            <p class="hero-catch">
 
-.logo-main {
+                豊能町のお店を、<br>
+                もっと身近に。
 
-    display: block;
+            </p>
 
-    font-size: 17px;
 
-    font-weight: 800;
+            <div class="recruit-badge">
 
-    letter-spacing: .08em;
+                2026年 商業マップ掲載店舗募集中
 
-}
+            </div>
 
-.logo-sub {
 
-    display: block;
+            <p class="hero-description">
 
-    margin-top: -3px;
+                豊能町には、地域に根ざして
+                活動するたくさんのお店があります。<br>
+                そんなお店をひとつのマップにまとめ、
+                町の皆さんに紹介します。
 
-    font-size: 7px;
+            </p>
 
-    letter-spacing: .16em;
 
-    color: #9aa29b;
+            <div class="hero-button-area">
 
-}
+                <a
+                    href="#apply"
+                    class="button button-primary"
+                >
 
-.header-button {
+                    掲載店舗として申し込む
 
-    display: inline-flex;
+                    <span class="button-arrow">
+                        →
+                    </span>
 
-    align-items: center;
+                </a>
 
-    justify-content: center;
+            </div>
 
-    padding:
-        10px 21px;
 
-    border-radius: 999px;
+            <p class="hero-note">
 
-    background:
-        var(--orange);
+                豊能町商工会青年部が企画・募集し、
+                豊能町商工会が取りまとめます。
 
-    color:
-        white;
+            </p>
 
-    text-decoration: none;
 
-    font-size: 13px;
+        </div>
 
-    font-weight: 800;
 
-    transition:
-        transform .2s,
-        box-shadow .2s;
 
-}
+        <!-- RIGHT MAP -->
 
-.header-button:hover {
+        <div class="map-area reveal">
 
-    transform:
-        translateY(-2px);
 
-    box-shadow:
-        0 7px 18px
-        rgba(
-            233,
-            154,
-            106,
-            .25
-        );
+            <div class="map-caption">
 
-}
+                <span>
+                    WALK AROUND
+                </span>
 
+                <strong>
+                    TOYONO
+                </strong>
 
-/* ===================================
-   HERO
-=================================== */
+            </div>
 
-.hero {
 
-    overflow: hidden;
+            <div class="map-background">
 
-    background:
 
-        radial-gradient(
-            circle at 8% 20%,
-            rgba(
-                243,
-                217,
-                139,
-                .55
-            )
-            0 70px,
-            transparent 71px
-        ),
+                <!-- 道 -->
 
-        radial-gradient(
-            circle at 93% 18%,
-            rgba(
-                216,
-                234,
-                209,
-                .8
-            )
-            0 100px,
-            transparent 101px
-        ),
+                <div class="map-road road-a"></div>
 
-        #fff8ed;
+                <div class="map-road road-b"></div>
 
-}
+                <div class="map-road road-c"></div>
 
-.hero-inner {
+                <div class="map-road road-d"></div>
 
-    width:
-        min(
-            1080px,
-            calc(100% - 40px)
-        );
+                <div class="map-road road-e"></div>
 
-    min-height: 630px;
 
-    margin: auto;
+                <!-- 自然 -->
 
-    display: grid;
+                <div class="map-green green-a"></div>
 
-    grid-template-columns:
-        1fr 1fr;
+                <div class="map-green green-b"></div>
 
-    align-items: center;
+                <div class="map-green green-c"></div>
 
-    gap: 55px;
+                <div class="map-green green-d"></div>
 
-}
 
-.hero-copy {
+                <!-- 店舗ピン -->
 
-    padding:
-        60px 0;
+                <div class="shop-pin pin-a">
 
-}
+                    <span>🍴</span>
 
-.eyebrow {
+                </div>
 
-    display: inline-block;
 
-    margin:
-        0 0 18px;
+                <div class="shop-pin pin-b">
 
-    padding:
-        7px 15px;
+                    <span>☕</span>
 
-    border-radius: 999px;
+                </div>
 
-    background:
-        #e6efdf;
 
-    color:
-        var(--green-dark);
+                <div class="shop-pin pin-c">
 
-    font-size: 12px;
+                    <span>🛍️</span>
 
-    font-weight: 800;
+                </div>
 
-    letter-spacing: .08em;
 
-}
+                <div class="shop-pin pin-d">
 
-.hero h1 {
+                    <span>🔧</span>
 
-    margin: 0;
+                </div>
 
-    font-size:
-        clamp(
-            48px,
-            6vw,
-            76px
-        );
 
-    line-height: 1.15;
+                <div class="shop-pin pin-e">
 
-    letter-spacing: .02em;
+                    <span>🏠</span>
 
-    font-weight: 900;
+                </div>
 
-    color:
-        var(--green-dark);
 
-}
+                <div class="shop-pin pin-f">
 
-.hero h1 span {
+                    <span>🍴</span>
 
-    color:
-        var(--orange);
+                </div>
 
-}
 
-.hero-catch {
+                <!-- マップ中央 -->
 
-    margin:
-        23px 0 8px;
+                <div class="map-center">
 
-    font-size: 25px;
 
-    line-height: 1.6;
+                    <div class="map-center-icon">
+                        ⌂
+                    </div>
 
-    font-weight: 800;
 
-    color:
-        var(--green-dark);
+                    <strong>
+                        TOYONO
+                    </strong>
 
-}
 
-.recruit-badge {
+                    <span>
+                        COMMERCIAL MAP
+                    </span>
 
-    display: inline-block;
 
-    margin:
-        8px 0 5px;
+                </div>
 
-    padding:
-        8px 16px;
 
-    border-radius: 999px;
+            </div>
 
-    background:
-        white;
 
-    color:
-        var(--orange);
+            <!-- 手描き風文字 -->
 
-    border:
-        1px solid
-        #f1d4c2;
+            <div class="map-handwriting">
 
-    font-size: 12px;
+                お店を見つけよう！
 
-    font-weight: 800;
+            </div>
 
-    letter-spacing: .04em;
 
-}
+        </div>
 
-.hero-description {
 
-    max-width: 530px;
+    </div>
 
-    margin:
-        15px 0;
 
-    color:
-        var(--muted);
+    <!-- 下方向 -->
 
-    font-size: 15px;
+    <div class="scroll-guide">
 
-}
+        <span>
+            SCROLL
+        </span>
 
-.hero-button-area {
+        <div class="scroll-line"></div>
 
-    margin-top: 28px;
+    </div>
 
-}
 
-.hero-note {
+</section>
 
-    margin:
-        16px 0 0;
 
-    font-size: 11px;
 
-    color:
-        #919891;
+<!-- =========================================
+     ABOUT
+========================================= -->
 
-}
+<section class="about section">
 
 
-/* ===================================
-   BUTTON
-=================================== */
+    <div class="hand-circle">
+        ○
+    </div>
 
-.button {
 
-    display: inline-flex;
+    <div class="container">
 
-    align-items: center;
 
-    justify-content: center;
+        <div class="section-heading reveal">
 
-    min-height: 55px;
 
-    padding:
-        0 30px;
+            <span class="section-label">
+                ABOUT
+            </span>
 
-    border-radius: 999px;
 
-    text-decoration: none;
+            <h2>
+                豊能町商業マップとは？
+            </h2>
 
-    font-weight: 800;
 
-    transition:
-        transform .2s,
-        box-shadow .2s;
+            <p class="heading-lead">
 
-}
+                「知っているお店」から<br>
+                「行ってみたいお店」へ。
 
-.button:hover {
+            </p>
 
-    transform:
-        translateY(-2px);
 
-}
+        </div>
 
-.button-primary {
 
-    background:
-        var(--orange);
+        <div class="about-box reveal">
 
-    color:
-        white;
 
-    box-shadow:
-        0 8px 20px
-        rgba(
-            233,
-            154,
-            106,
-            .25
-        );
+            <div class="about-text">
 
-}
 
-.button-white {
+                <p>
 
-    background:
-        white;
+                    豊能町には、飲食店や小売店、
+                    サービス業など、
+                    地域に根ざして活動する
+                    たくさんのお店があります。
 
-    color:
-        var(--green-dark);
+                </p>
 
-    box-shadow:
-        0 8px 25px
-        rgba(
-            0,
-            0,
-            0,
-            .08
-        );
 
-}
+                <p>
 
+                    そんな豊能町のお店を
+                    ひとつのマップにまとめ、
+                    地域の皆さまに
+                    「こんなお店があるんだ」と
+                    知っていただく。
 
-/* ===================================
-   MAP
-=================================== */
+                </p>
 
-.map-area {
 
-    display: flex;
+                <p class="about-emphasis">
 
-    justify-content: center;
+                    お店を知る。<br>
+                    町を歩く。<br>
+                    新しい発見に出会う。
 
-    align-items: center;
+                </p>
 
-}
 
-.map-background {
+            </div>
 
-    position: relative;
 
-    width:
-        min(
-            470px,
-            100%
-        );
+            <div class="about-illustration">
 
-    aspect-ratio:
-        1 / 1;
 
-    overflow: hidden;
+                <div class="hill hill-back"></div>
 
-    border-radius:
-        42% 58% 53% 47% /
-        48% 43% 57% 52%;
+                <div class="hill hill-front"></div>
 
-    background:
 
-        radial-gradient(
-            circle at 20% 20%,
-            #e3efd9 0 70px,
-            transparent 71px
-        ),
+                <div class="tree tree-a">
+                    🌳
+                </div>
 
-        radial-gradient(
-            circle at 80% 70%,
-            #f5d8c5 0 80px,
-            transparent 81px
-        ),
+                <div class="tree tree-b">
+                    🌲
+                </div>
 
-        #f1ead8;
+                <div class="tree tree-c">
+                    🌳
+                </div>
 
-    box-shadow:
-        0 25px 60px
-        rgba(
-            70,
-            80,
-            65,
-            .12
-        );
 
-}
+                <div class="walking-person">
+                    🚶
+                </div>
 
 
-/* Roads */
+            </div>
 
-.map-road {
 
-    position: absolute;
+        </div>
 
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            .9
-        );
 
-    border-radius: 999px;
+    </div>
 
-    box-shadow:
-        0 0 0 3px
-        rgba(
-            214,
-            203,
-            178,
-            .3
-        );
+</section>
 
-}
 
-.road-a {
 
-    width: 120%;
+<!-- =========================================
+     BENEFITS
+========================================= -->
 
-    height: 26px;
+<section class="benefits section">
 
-    left: -10%;
 
-    top: 48%;
+    <div class="container">
 
-    transform:
-        rotate(-18deg);
 
-}
+        <div class="section-heading reveal">
 
-.road-b {
 
-    width: 28px;
+            <span class="section-label">
+                BENEFITS
+            </span>
 
-    height: 120%;
 
-    left: 48%;
+            <h2>
+                掲載するメリット
+            </h2>
 
-    top: -10%;
 
-    transform:
-        rotate(25deg);
+            <p class="heading-lead">
 
-}
+                あなたのお店を、<br>
+                豊能町のみんなに知ってもらおう。
 
-.road-c {
+            </p>
 
-    width: 85%;
 
-    height: 20px;
+        </div>
 
-    left: 10%;
 
-    top: 25%;
 
-    transform:
-        rotate(34deg);
+        <div class="benefit-grid">
 
-}
 
-.road-d {
+            <article class="benefit-card reveal">
 
-    width: 75%;
 
-    height: 18px;
+                <div class="benefit-icon">
+                    📍
+                </div>
 
-    left: 20%;
 
-    top: 72%;
+                <div class="benefit-number">
+                    01
+                </div>
 
-    transform:
-        rotate(-32deg);
 
-}
+                <h3>
+                    地域の方へのPR
+                </h3>
 
 
-/* Green areas */
+                <p>
 
-.map-green {
+                    豊能町内の皆さまに、
+                    お店や事業所の存在を
+                    知ってもらうきっかけになります。
 
-    position: absolute;
+                </p>
 
-    border-radius: 50%;
 
-    background:
-        rgba(
-            125,
-            157,
-            117,
-            .22
-        );
+                <div class="hand-line"></div>
 
-}
 
-.green-a {
+            </article>
 
-    width: 90px;
 
-    height: 70px;
 
-    left: 5%;
+            <article class="benefit-card reveal">
 
-    bottom: 12%;
 
-}
+                <div class="benefit-icon">
+                    🤝
+                </div>
 
-.green-b {
 
-    width: 110px;
+                <div class="benefit-number">
+                    02
+                </div>
 
-    height: 90px;
 
-    right: 5%;
+                <h3>
+                    新しいお客様との接点
+                </h3>
 
-    top: 8%;
 
-}
+                <p>
 
-.green-c {
+                    「こんなお店があったんだ」という
+                    新しい出会いにつながります。
 
-    width: 70px;
+                </p>
 
-    height: 65px;
 
-    left: 38%;
+                <div class="hand-line"></div>
 
-    bottom: 2%;
 
-}
+            </article>
 
 
-/* Pins */
 
-.shop-pin {
+            <article class="benefit-card reveal">
 
-    position: absolute;
 
-    width: 46px;
+                <div class="benefit-icon">
+                    🏪
+                </div>
 
-    height: 46px;
 
-    display: flex;
+                <div class="benefit-number">
+                    03
+                </div>
 
-    align-items: center;
 
-    justify-content: center;
+                <h3>
+                    お店の魅力を紹介
+                </h3>
 
-    border-radius:
-        50% 50% 50% 0;
 
-    transform:
-        rotate(-45deg);
+                <p>
 
-    background:
-        var(--orange);
+                    商品やサービス、店舗PRなどを通じて、
+                    お店の魅力を発信できます。
 
-    color:
-        white;
+                </p>
 
-    font-weight: 900;
 
-    box-shadow:
-        0 5px 15px
-        rgba(
-            0,
-            0,
-            0,
-            .12
-        );
+                <div class="hand-line"></div>
 
-}
 
-.shop-pin span {
+            </article>
 
-    transform:
-        rotate(45deg);
 
-}
+        </div>
 
-.pin-a {
 
-    top: 20%;
+    </div>
 
-    left: 20%;
 
-}
+</section>
 
-.pin-b {
 
-    top: 47%;
 
-    left: 63%;
+<!-- =========================================
+     TOWN WALK
+========================================= -->
 
-}
+<section class="town-walk section">
 
-.pin-c {
 
-    top: 68%;
+    <div class="container">
 
-    left: 28%;
 
-}
+        <div class="walk-header reveal">
 
-.pin-d {
 
-    top: 35%;
+            <div>
 
-    left: 44%;
+                <span class="section-label">
+                    TOWN WALK
+                </span>
 
-}
+                <h2>
+                    まちを歩けば、<br>
+                    新しいお店に出会える。
+                </h2>
 
-.pin-e {
+            </div>
 
-    top: 72%;
 
-    left: 70%;
+            <p>
 
-}
+                商業マップを手に、
+                豊能町を歩いてみませんか？
 
+            </p>
 
-/* Center */
 
-.map-center {
+        </div>
 
-    position: absolute;
 
-    left: 50%;
 
-    top: 50%;
+        <div class="walk-route reveal">
 
-    transform:
-        translate(
-            -50%,
-            -50%
-        );
 
-    width: 210px;
+            <div class="route-line"></div>
 
-    padding: 20px;
 
-    text-align: center;
+            <div class="route-point point-1">
 
-    border-radius: 24px;
+                <span class="route-pin">
+                    ●
+                </span>
 
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            .92
-        );
+                <strong>
+                    START
+                </strong>
 
-    box-shadow:
-        0 10px 30px
-        rgba(
-            0,
-            0,
-            0,
-            .08
-        );
+                <small>
+                    豊能町
+                </small>
 
-}
+            </div>
 
-.map-center strong {
 
-    display: block;
+            <div class="route-point point-2">
 
-    color:
-        var(--green-dark);
+                <span class="route-pin">
+                    🍴
+                </span>
 
-    font-size: 26px;
+                <strong>
+                    EAT
+                </strong>
 
-    letter-spacing: .08em;
+                <small>
+                    食べる
+                </small>
 
-}
+            </div>
 
-.map-center span {
 
-    font-size: 9px;
+            <div class="route-point point-3">
 
-    letter-spacing: .16em;
+                <span class="route-pin">
+                    🛍️
+                </span>
 
-    color:
-        #9aa29b;
+                <strong>
+                    SHOP
+                </strong>
 
-}
+                <small>
+                    買う
+                </small>
 
+            </div>
 
-/* ===================================
-   SECTION HEADING
-=================================== */
 
-.section-heading {
+            <div class="route-point point-4">
 
-    margin-bottom: 38px;
+                <span class="route-pin">
+                    ☕
+                </span>
 
-    text-align: center;
+                <strong>
+                    ENJOY
+                </strong>
 
-}
+                <small>
+                    楽しむ
+                </small>
 
-.section-label {
+            </div>
 
-    display: block;
 
-    margin-bottom: 8px;
+            <div class="route-point point-5">
 
-    color:
-        var(--orange);
+                <span class="route-pin">
+                    ♥
+                </span>
 
-    font-size: 11px;
+                <strong>
+                    FIND
+                </strong>
 
-    font-weight: 900;
+                <small>
+                    お気に入り
+                </small>
 
-    letter-spacing: .18em;
+            </div>
 
-}
 
-.section-heading h2 {
+        </div>
 
-    margin: 0;
 
-    font-size:
-        clamp(
-            28px,
-            4vw,
-            40px
-        );
+    </div>
 
-    color:
-        var(--green-dark);
 
-    letter-spacing: .04em;
+</section>
 
-}
 
 
-/* ===================================
-   ABOUT
-=================================== */
+<!-- =========================================
+     INFORMATION
+========================================= -->
 
-.about {
+<section class="information section">
 
-    background:
-        var(--cream);
 
-}
+    <div class="container">
 
-.about-box {
 
-    max-width: 820px;
+        <div class="section-heading reveal">
 
-    margin: auto;
 
-    padding:
-        38px 45px;
+            <span class="section-label">
+                INFORMATION
+            </span>
 
-    border-radius: 28px;
 
-    background:
-        white;
+            <h2>
+                掲載する情報
+            </h2>
 
-    border:
-        1px solid
-        #edf0e8;
 
-    box-shadow:
-        0 12px 35px
-        rgba(
-            70,
-            85,
-            74,
-            .05
-        );
+            <p class="heading-lead">
 
-}
+                お店のことを、分かりやすく紹介します。
 
-.about-box p {
+            </p>
 
-    margin:
-        0 0 15px;
 
-}
+        </div>
 
-.about-box p:last-child {
 
-    margin-bottom: 0;
 
-}
+        <div class="information-grid">
 
 
-/* ===================================
-   BENEFITS
-=================================== */
+            <div class="info-item reveal">
 
-.benefits {
+                <span class="info-icon">
+                    🏪
+                </span>
 
-    background:
-        var(--cream);
+                <strong>
+                    店舗名・事業所名
+                </strong>
 
-}
+            </div>
 
-.benefit-grid {
 
-    display: grid;
+            <div class="info-item reveal">
 
-    grid-template-columns:
-        repeat(
-            3,
-            1fr
-        );
+                <span class="info-icon">
+                    🏷️
+                </span>
 
-    gap: 18px;
+                <strong>
+                    業種
+                </strong>
 
-}
+            </div>
 
-.benefit-card {
 
-    position: relative;
+            <div class="info-item reveal">
 
-    padding:
-        35px 28px;
+                <span class="info-icon">
+                    📍
+                </span>
 
-    min-height: 230px;
+                <strong>
+                    所在地
+                </strong>
 
-    border-radius: 26px;
+            </div>
 
-    background:
-        white;
 
-    border:
-        1px solid
-        #edf0e8;
+            <div class="info-item reveal">
 
-    box-shadow:
-        0 10px 30px
-        rgba(
-            70,
-            85,
-            74,
-            .05
-        );
+                <span class="info-icon">
+                    ☎️
+                </span>
 
-    overflow: hidden;
+                <strong>
+                    電話番号
+                </strong>
 
-}
+            </div>
 
-.benefit-card::after {
 
-    content: "";
+            <div class="info-item reveal">
 
-    position: absolute;
+                <span class="info-icon">
+                    🛍️
+                </span>
 
-    right: -25px;
+                <strong>
+                    取扱商品・サービス
+                </strong>
 
-    bottom: -25px;
+            </div>
 
-    width: 90px;
 
-    height: 90px;
+            <div class="info-item reveal">
 
-    border-radius: 50%;
+                <span class="info-icon">
+                    ✨
+                </span>
 
-    background:
-        #f5e6b9;
+                <strong>
+                    店舗PR
+                </strong>
 
-    opacity: .45;
+            </div>
 
-}
 
-.benefit-number {
+            <div class="info-item reveal">
 
-    margin-bottom: 18px;
+                <span class="info-icon">
+                    🕐
+                </span>
 
-    color:
-        var(--orange);
+                <strong>
+                    営業時間・定休日
+                </strong>
 
-    font-size: 13px;
+            </div>
 
-    font-weight: 900;
 
-    letter-spacing: .12em;
+            <div class="info-item reveal">
 
-}
+                <span class="info-icon">
+                    🔗
+                </span>
 
-.benefit-card h3 {
+                <strong>
+                    SNS・ホームページ
+                </strong>
 
-    margin:
-        0 0 12px;
+            </div>
 
-    color:
-        var(--green-dark);
 
-    font-size: 19px;
+        </div>
 
-}
 
-.benefit-card p {
+    </div>
 
-    margin: 0;
 
-    color:
-        var(--muted);
+</section>
 
-    font-size: 13px;
 
-    line-height: 1.9;
 
-}
+<!-- =========================================
+     REQUIREMENTS
+========================================= -->
 
+<section class="requirements section">
 
-/* ===================================
-   INFORMATION
-=================================== */
 
-.information {
+    <div class="container">
 
-    background:
-        #f5f8f1;
 
-}
+        <div class="section-heading reveal">
 
-.information-grid {
 
-    display: grid;
+            <span class="section-label">
+                REQUIREMENTS
+            </span>
 
-    grid-template-columns:
-        repeat(
-            4,
-            1fr
-        );
 
-    gap: 14px;
+            <h2>
+                募集概要
+            </h2>
 
-}
 
-.info-item {
+        </div>
 
-    min-height: 120px;
 
-    padding:
-        22px 18px;
+        <div class="requirements-box reveal">
 
-    display: flex;
 
-    flex-direction: column;
+            <div class="requirement-row">
 
-    justify-content: center;
+                <span>
+                    対象
+                </span>
 
-    border-radius: 20px;
+                <strong>
+                    豊能町内の事業者・店舗等
+                </strong>
 
-    background:
-        white;
+            </div>
 
-    text-align: center;
 
-    border:
-        1px solid
-        #e9eee4;
+            <div class="requirement-row">
 
-}
+                <span>
+                    掲載料
+                </span>
 
-.info-icon {
+                <strong>
+                    会員・非会員で設定予定
+                </strong>
 
-    margin-bottom: 8px;
+            </div>
 
-    color:
-        var(--orange);
 
-    font-size: 11px;
+            <div class="requirement-row">
 
-    font-weight: 900;
+                <span>
+                    募集期間
+                </span>
 
-    letter-spacing: .08em;
+                <strong class="deadline">
+                    2026年12月31日まで
+                </strong>
 
-}
+            </div>
 
-.info-item strong {
 
-    color:
-        var(--green-dark);
+            <div class="requirement-row">
 
-    font-size: 14px;
+                <span>
+                    申込方法
+                </span>
 
-}
+                <strong>
+                    専用フォームからお申し込み
+                </strong>
 
+            </div>
 
-/* ===================================
-   REQUIREMENTS
-=================================== */
 
-.requirements {
+        </div>
 
-    background:
-        var(--cream);
 
-}
+        <p class="requirements-note reveal">
 
-.requirements-box {
+            ※掲載料等の詳細については、決定次第ご案内します。
 
-    max-width: 850px;
+        </p>
 
-    margin: auto;
 
-    padding:
-        25px 35px;
+    </div>
 
-    border-radius: 28px;
 
-    background:
-        #f1eee2;
+</section>
 
-}
 
-.requirement-row {
 
-    display: grid;
+<!-- =========================================
+     FLOW
+========================================= -->
 
-    grid-template-columns:
-        170px 1fr;
+<section class="flow section">
 
-    align-items: center;
 
-    padding:
-        18px 0;
+    <div class="container">
 
-    border-bottom:
-        1px solid
-        rgba(
-            83,
-            102,
-            84,
-            .13
-        );
 
-}
+        <div class="section-heading reveal">
 
-.requirement-row:last-child {
 
-    border-bottom: none;
+            <span class="section-label">
+                FLOW
+            </span>
 
-}
 
-.requirement-row span {
+            <h2>
+                掲載までの流れ
+            </h2>
 
-    color:
-        var(--green-dark);
 
-    font-size: 13px;
+        </div>
 
-    font-weight: 800;
 
-}
 
-.requirement-row strong {
+        <div class="flow-list">
 
-    font-size: 15px;
 
-}
+            <div class="flow-item reveal">
 
-.deadline {
 
-    color:
-        var(--orange);
+                <div class="flow-number">
+                    01
+                </div>
 
-    font-size: 18px;
 
-}
+                <div class="flow-icon">
+                    📝
+                </div>
 
 
-/* ===================================
-   FLOW
-=================================== */
+                <h3>
+                    お申し込み
+                </h3>
 
-.flow {
 
-    background:
-        #fff8ed;
+                <p>
 
-}
+                    専用フォームから
+                    必要事項を入力してください。
 
-.flow-list {
+                </p>
 
-    max-width: 850px;
 
-    margin: auto;
+            </div>
 
-    display: grid;
 
-    grid-template-columns:
-        1fr auto 1fr auto 1fr;
+            <div class="flow-arrow reveal">
+                →
+            </div>
 
-    align-items: center;
 
-    gap: 20px;
+            <div class="flow-item reveal">
 
-}
 
-.flow-item {
+                <div class="flow-number">
+                    02
+                </div>
 
-    padding:
-        28px 20px;
 
-    border-radius: 22px;
+                <div class="flow-icon">
+                    🔍
+                </div>
 
-    background:
-        white;
 
-    text-align: center;
+                <h3>
+                    内容確認
+                </h3>
 
-    border:
-        1px solid
-        #eee9df;
 
-}
+                <p>
 
-.flow-number {
+                    豊能町商工会にて
+                    掲載内容を確認します。
 
-    margin-bottom: 12px;
+                </p>
 
-    color:
-        var(--orange);
 
-    font-size: 27px;
+            </div>
 
-    font-weight: 900;
 
-}
+            <div class="flow-arrow reveal">
+                →
+            </div>
 
-.flow-item h3 {
 
-    margin:
-        0 0 6px;
+            <div class="flow-item reveal">
 
-    color:
-        var(--green-dark);
 
-    font-size: 17px;
+                <div class="flow-number">
+                    03
+                </div>
 
-}
 
-.flow-item p {
+                <div class="flow-icon">
+                    📍
+                </div>
 
-    margin: 0;
 
-    color:
-        var(--muted);
+                <h3>
+                    マップ掲載
+                </h3>
 
-    font-size: 12px;
 
-}
+                <p>
 
-.flow-arrow {
+                    確認後、商業マップへ
+                    店舗情報を掲載します。
 
-    color:
-        var(--orange);
+                </p>
 
-    font-size: 28px;
 
-    font-weight: 800;
+            </div>
 
-}
 
+        </div>
 
-/* ===================================
-   APPLY
-=================================== */
 
-.apply {
+    </div>
 
-    position: relative;
 
-    overflow: hidden;
+</section>
 
-    padding:
-        90px 20px;
 
-    text-align: center;
 
-    background:
+<!-- =========================================
+     APPLY
+========================================= -->
 
-        radial-gradient(
-            circle at 12% 25%,
-            rgba(
-                243,
-                217,
-                139,
-                .65
-            )
-            0 75px,
-            transparent 76px
-        ),
+<section
+    class="apply"
+    id="apply"
+>
 
-        radial-gradient(
-            circle at 88% 70%,
-            rgba(
-                216,
-                234,
-                209,
-                .75
-            )
-            0 100px,
-            transparent 101px
-        ),
 
-        var(--green);
+    <div class="apply-decoration">
+        🌿
+    </div>
 
-}
 
-.apply-inner {
+    <div class="apply-inner reveal">
 
-    max-width: 760px;
 
-    margin: auto;
+        <span class="section-label">
+            JOIN US
+        </span>
 
-}
 
-.apply .section-label {
+        <h2>
 
-    color:
-        #f4d89d;
+            豊能町のお店を、<br>
+            一緒に紹介しませんか？
 
-}
+        </h2>
 
-.apply h2 {
 
-    margin: 0;
+        <p>
 
-    color:
-        white;
+            商業マップへの掲載を希望される
+            事業者の皆さまは、
+            専用フォームからお申し込みください。
 
-    font-size:
-        clamp(
-            30px,
-            5vw,
-            48px
-        );
+        </p>
 
-    line-height: 1.5;
 
-}
+        <!--
+            フォームURLが決まったら
+            href="#" を変更してください。
+        -->
 
-.apply p {
+        <a
+            href="#"
+            class="button button-white"
+        >
 
-    margin:
-        20px auto 30px;
+            掲載を申し込む
 
-    max-width: 600px;
+            <span class="button-arrow">
+                →
+            </span>
 
-    color:
-        rgba(
-            255,
-            255,
-            255,
-            .85
-        );
+        </a>
 
-}
 
-.apply-note {
+        <p class="apply-note">
 
-    margin-top:
-        13px !important;
+            ※申込フォームは準備中です。
 
-    font-size: 11px;
+        </p>
 
-    color:
-        rgba(
-            255,
-            255,
-            255,
-            .55
-        ) !important;
 
-}
+    </div>
 
 
-/* ===================================
-   CONTACT
-=================================== */
+</section>
 
-.contact {
 
-    background:
-        var(--cream);
 
-}
+<!-- =========================================
+     CONTACT
+========================================= -->
 
-.contact-box {
+<section class="contact section">
 
-    max-width: 600px;
 
-    margin: auto;
+    <div class="container">
 
-    padding:
-        38px;
 
-    text-align: center;
+        <div class="section-heading reveal">
 
-    border-radius: 28px;
 
-    background:
-        white;
+            <span class="section-label">
+                CONTACT
+            </span>
 
-    border:
-        1px solid
-        #edf0e8;
 
-    box-shadow:
-        0 12px 35px
-        rgba(
-            70,
-            85,
-            74,
-            .05
-        );
+            <h2>
+                お問い合わせ
+            </h2>
 
-}
 
-.contact-name {
+        </div>
 
-    color:
-        var(--green-dark);
 
-    font-size: 20px;
+        <div class="contact-box reveal">
 
-    font-weight: 800;
 
-}
+            <div class="contact-decoration">
+                🌿
+            </div>
 
-.contact-tel {
 
-    display: inline-block;
+            <div class="contact-name">
+                豊能町商工会
+            </div>
 
-    margin:
-        8px 0 10px;
 
-    color:
-        var(--orange);
+            <a
+                href="tel:0727391647"
+                class="contact-tel"
+            >
+                072-739-1647
+            </a>
 
-    font-size: 30px;
 
-    font-weight: 900;
+            <p>
+                大阪府豊能郡豊能町余野1008
+            </p>
 
-    text-decoration: none;
 
-    letter-spacing: .05em;
+        </div>
 
-}
 
-.contact-box p {
+    </div>
 
-    margin: 0;
 
-    color:
-        var(--muted);
+</section>
 
-    font-size: 14px;
 
-}
 
+</main>
 
-/* ===================================
-   FOOTER
-=================================== */
 
-footer {
 
-    padding:
-        35px 20px;
+<!-- =========================================
+     FOOTER
+========================================= -->
 
-    text-align: center;
+<footer>
 
-    background:
-        #46564a;
 
-    color:
-        white;
+    <div class="footer-inner">
 
-}
 
-.footer-inner strong {
+        <strong>
+            豊能町商工会青年部
+        </strong>
 
-    font-size: 15px;
 
-}
+        <p>
+            豊能町商業マップ
+        </p>
 
-.footer-inner p {
 
-    margin:
-        4px 0 15px;
+        <small>
+            © 2026 Toyono Town Chamber of Commerce Youth Division
+        </small>
 
-    opacity: .75;
 
-    font-size: 12px;
+    </div>
 
-}
 
-.footer-inner small {
+</footer>
 
-    opacity: .45;
 
-    font-size: 10px;
 
-}
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
 
+<script src="script.js"></script>
 
-/* ===================================
-   MOBILE
-=================================== */
 
-@media (max-width: 800px) {
+</body>
 
-
-    .container,
-    .header-inner,
-    .hero-inner {
-
-        width:
-            min(
-                100% - 28px,
-                600px
-            );
-
-    }
-
-
-    .section {
-
-        padding:
-            60px 0;
-
-    }
-
-
-    /* Header */
-
-    .header-inner {
-
-        min-height: 62px;
-
-    }
-
-
-    .logo-main {
-
-        font-size: 14px;
-
-    }
-
-
-    .logo-sub {
-
-        display: none;
-
-    }
-
-
-    .header-button {
-
-        padding:
-            9px 14px;
-
-        font-size: 11px;
-
-    }
-
-
-    /* Hero */
-
-    .hero-inner {
-
-        display: block;
-
-    }
-
-
-    .hero-copy {
-
-        padding:
-            55px 0 30px;
-
-    }
-
-
-    .hero h1 {
-
-        font-size: 48px;
-
-    }
-
-
-    .hero-catch {
-
-        font-size: 21px;
-
-    }
-
-
-    .hero-description {
-
-        font-size: 14px;
-
-    }
-
-
-    .hero-button-area .button {
-
-        width: 100%;
-
-    }
-
-
-    .map-area {
-
-        padding-bottom:
-            55px;
-
-    }
-
-
-    .map-background {
-
-        width:
-            min(
-                420px,
-                100%
-            );
-
-    }
-
-
-    /* About */
-
-    .about-box {
-
-        padding:
-            28px 23px;
-
-    }
-
-
-    /* Benefits */
-
-    .benefit-grid {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .benefit-card {
-
-        min-height:
-            auto;
-
-        padding:
-            28px 23px;
-
-    }
-
-
-    /* Information */
-
-    .information-grid {
-
-        grid-template-columns:
-            repeat(
-                2,
-                1fr
-            );
-
-        gap: 10px;
-
-    }
-
-
-    .info-item {
-
-        min-height:
-            100px;
-
-        padding:
-            17px 10px;
-
-    }
-
-
-    .info-item strong {
-
-        font-size:
-            12px;
-
-    }
-
-
-    /* Requirements */
-
-    .requirements-box {
-
-        padding:
-            18px 22px;
-
-    }
-
-
-    .requirement-row {
-
-        grid-template-columns:
-            1fr;
-
-        gap: 4px;
-
-        padding:
-            15px 0;
-
-    }
-
-
-    .requirement-row strong {
-
-        font-size:
-            14px;
-
-    }
-
-
-    .deadline {
-
-        font-size:
-            17px;
-
-    }
-
-
-    /* Flow */
-
-    .flow-list {
-
-        display: block;
-
-    }
-
-
-    .flow-item {
-
-        margin-bottom:
-            10px;
-
-    }
-
-
-    .flow-arrow {
-
-        text-align:
-            center;
-
-        line-height:
-            1;
-
-        margin:
-            5px 0;
-
-    }
-
-
-    /* Apply */
-
-    .apply {
-
-        padding:
-            75px 20px;
-
-    }
-
-
-    .apply h2 {
-
-        font-size:
-            30px;
-
-    }
-
-
-    /* Contact */
-
-    .contact-tel {
-
-        font-size:
-            26px;
-
-    }
-
-
-}
+</html>
