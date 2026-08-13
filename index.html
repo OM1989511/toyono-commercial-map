@@ -3,13 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>豊能町商業マップ｜掲載店舗募集</title>
 
+    <meta name="description"
+        content="豊能町商工会では、豊能町内のお店や事業所を紹介する商業マップを制作します。掲載店舗を募集しています。">
+
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family:
@@ -19,100 +29,1043 @@
                 "Yu Gothic",
                 Meiryo,
                 sans-serif;
-            background: #fffaf2;
-            color: #333;
+
+            color: #3f4641;
+            background: #fffdf8;
+            line-height: 1.8;
         }
 
-        header {
-            padding: 80px 20px;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* =========================
+           共通
+        ========================= */
+
+        .container {
+            width: min(1100px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            margin: 0;
             text-align: center;
-            background: #e5efdf;
+            font-size: clamp(28px, 4vw, 42px);
+            letter-spacing: .05em;
+            color: #46554a;
         }
 
-        h1 {
-            font-size: 42px;
-            margin: 0 0 20px;
-        }
-
-        header p {
-            font-size: 20px;
-        }
-
-        main {
-            max-width: 900px;
-            margin: auto;
-            padding: 80px 20px;
+        .section-lead {
+            margin: 18px auto 50px;
             text-align: center;
+            max-width: 720px;
+            color: #68736c;
+        }
+
+        /* =========================
+           ヘッダー
+        ========================= */
+
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 253, 248, .94);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(70, 85, 74, .08);
+        }
+
+        .header-inner {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            text-decoration: none;
+            font-weight: 800;
+            letter-spacing: .08em;
+            color: #46554a;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 11px;
+            letter-spacing: .15em;
+            color: #8a968e;
+        }
+
+        .header-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 11px 20px;
+            border-radius: 999px;
+            background: #e58b61;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* =========================
+           ヒーロー
+        ========================= */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 90px 0 100px;
+            background:
+                radial-gradient(circle at 10% 20%, #f7e7b5 0 80px, transparent 81px),
+                radial-gradient(circle at 90% 15%, #d9ead1 0 100px, transparent 101px),
+                radial-gradient(circle at 85% 85%, #f4d6c5 0 90px, transparent 91px),
+                #fff8ed;
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-copy {
+            position: relative;
+            z-index: 2;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 7px 16px;
+            border-radius: 999px;
+            background: #e4efd9;
+            color: #536654;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .08em;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: clamp(40px, 6vw, 72px);
+            line-height: 1.2;
+            letter-spacing: .04em;
+            color: #46554a;
+        }
+
+        .hero h1 strong {
+            color: #df8056;
+        }
+
+        .hero-text {
+            margin: 25px 0 0;
+            font-size: 18px;
+            color: #68736c;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 35px;
         }
 
         .button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 18px 45px;
-            border-radius: 50px;
-            background: #e58b61;
-            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 56px;
+            padding: 0 30px;
+            border-radius: 999px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 800;
+            transition: transform .2s ease, box-shadow .2s ease;
         }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,.08);
+        }
+
+        .button-primary {
+            background: #e58b61;
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(229,139,97,.25);
+        }
+
+        .button-secondary {
+            background: #fff;
+            color: #536654;
+            border: 1px solid #dfe5dd;
+        }
+
+        /* =========================
+           地図プレースホルダー
+        ========================= */
+
+        .map-placeholder {
+            position: relative;
+            min-height: 430px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 35px;
+            background:
+                radial-gradient(circle at 20% 30%, #dcebd3 0 45px, transparent 46px),
+                radial-gradient(circle at 75% 25%, #f7dfae 0 60px, transparent 61px),
+                radial-gradient(circle at 70% 75%, #f2d5c3 0 55px, transparent 56px),
+                #f5f0df;
+
+            box-shadow: 0 25px 60px rgba(74, 84, 67, .12);
+        }
+
+        .map-shape {
+            width: 75%;
+            height: 75%;
+            position: relative;
+        }
+
+        .map-road {
+            position: absolute;
+            background: #fff;
+            border-radius: 999px;
+            box-shadow: 0 0 0 3px rgba(213, 203, 176, .35);
+        }
+
+        .road-1 {
+            width: 120%;
+            height: 30px;
+            top: 45%;
+            left: -10%;
+            transform: rotate(-20deg);
+        }
+
+        .road-2 {
+            width: 35px;
+            height: 120%;
+            top: -10%;
+            left: 48%;
+            transform: rotate(24deg);
+        }
+
+        .road-3 {
+            width: 80%;
+            height: 22px;
+            top: 25%;
+            left: 15%;
+            transform: rotate(35deg);
+        }
+
+        .map-pin {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            background: #e58b61;
+            color: #fff;
+            font-weight: 800;
+            box-shadow: 0 5px 12px rgba(0,0,0,.12);
+        }
+
+        .map-pin span {
+            transform: rotate(45deg);
+        }
+
+        .pin-1 {
+            top: 18%;
+            left: 20%;
+        }
+
+        .pin-2 {
+            top: 50%;
+            left: 62%;
+        }
+
+        .pin-3 {
+            top: 70%;
+            left: 32%;
+        }
+
+        .pin-4 {
+            top: 35%;
+            left: 43%;
+        }
+
+        .map-label {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 220px;
+            text-align: center;
+            padding: 18px;
+            border-radius: 20px;
+            background: rgba(255,255,255,.88);
+            box-shadow: 0 10px 30px rgba(0,0,0,.08);
+        }
+
+        .map-label strong {
+            display: block;
+            font-size: 25px;
+            color: #536654;
+        }
+
+        .map-label small {
+            color: #8a968e;
+        }
+
+        /* =========================
+           カード
+        ========================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            padding: 35px 28px;
+            border-radius: 25px;
+            background: #fff;
+            border: 1px solid #edf0ea;
+            box-shadow: 0 10px 30px rgba(70, 85, 74, .06);
+            text-align: center;
+        }
+
+        .card-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 27px;
+            background: #eef4e8;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            color: #536654;
+            font-size: 20px;
+        }
+
+        .card p {
+            margin: 0;
+            color: #727c75;
+            font-size: 14px;
+        }
+
+        /* =========================
+           掲載内容
+        ========================= */
+
+        .content-box {
+            max-width: 850px;
+            margin: auto;
+            padding: 45px;
+            border-radius: 30px;
+            background: #f4f0e4;
+        }
+
+        .content-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .content-list li {
+            padding: 17px 20px;
+            border-bottom: 1px solid #ddd7c8;
+        }
+
+        .content-list li::before {
+            content: "✓";
+            margin-right: 10px;
+            color: #e58b61;
+            font-weight: 800;
+        }
+
+        /* =========================
+           流れ
+        ========================= */
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .step {
+            position: relative;
+            padding: 35px 25px;
+            text-align: center;
+            border-radius: 25px;
+            background: #fff;
+            border: 1px solid #edf0ea;
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #e58b61;
+            color: #fff;
+            font-weight: 800;
+            font-size: 20px;
+        }
+
+        .step h3 {
+            margin: 0 0 8px;
+            color: #536654;
+        }
+
+        .step p {
+            margin: 0;
+            font-size: 14px;
+            color: #727c75;
+        }
+
+        /* =========================
+           募集要項
+        ========================= */
+
+        .requirements {
+            max-width: 850px;
+            margin: auto;
+            padding: 45px;
+            border-radius: 30px;
+            background: #e9f0e3;
+        }
+
+        .requirements dl {
+            margin: 0;
+        }
+
+        .requirements dl div {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(83,102,84,.15);
+        }
+
+        .requirements dt {
+            font-weight: 800;
+            color: #536654;
+        }
+
+        .requirements dd {
+            margin: 0;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            padding: 100px 20px;
+            text-align: center;
+            background:
+                radial-gradient(circle at 15% 25%, #f7dfae 0 70px, transparent 71px),
+                radial-gradient(circle at 85% 70%, #dcebd3 0 90px, transparent 91px),
+                #fff2e6;
+        }
+
+        .cta h2 {
+            margin: 0;
+            font-size: clamp(30px, 5vw, 48px);
+            color: #536654;
+        }
+
+        .cta p {
+            margin: 20px auto 30px;
+            max-width: 650px;
+            color: #727c75;
+        }
+
+        /* =========================
+           フッター
+        ========================= */
 
         footer {
-            padding: 30px;
+            padding: 40px 20px;
             text-align: center;
-            background: #f1eee5;
-            color: #666;
+            background: #46554a;
+            color: #fff;
         }
-    </style>
 
+        footer p {
+            margin: 4px 0;
+            font-size: 13px;
+        }
+
+        footer .small {
+            opacity: .7;
+            font-size: 11px;
+        }
+
+        /* =========================
+           スマホ
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .container {
+                width: min(100% - 28px, 600px);
+            }
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .header-inner {
+                min-height: 62px;
+            }
+
+            .header-button {
+                padding: 9px 15px;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 60px 0 70px;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero-text {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .map-placeholder {
+                min-height: 320px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .content-list {
+                grid-template-columns: 1fr;
+            }
+
+            .content-box,
+            .requirements {
+                padding: 28px 22px;
+            }
+
+            .requirements dl div {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-<header>
 
-    <h1>
-        豊能町商業マップ
-    </h1>
+<!-- =========================
+     ヘッダー
+========================= -->
 
-    <p>
-        掲載店舗募集中！
-    </p>
+<header class="header">
+
+    <div class="container header-inner">
+
+        <a href="#" class="logo">
+            豊能町商工会
+            <span>TOYONO TOWN CHAMBER OF COMMERCE</span>
+        </a>
+
+        <a href="#apply" class="header-button">
+            掲載を申し込む
+        </a>
+
+    </div>
 
 </header>
 
 
-<main>
+<!-- =========================
+     メインビジュアル
+========================= -->
+
+<section class="hero">
+
+    <div class="container hero-inner">
+
+        <div class="hero-copy">
+
+            <span class="eyebrow">
+                豊能町商工会
+            </span>
+
+            <h1>
+                豊能町<br>
+                <strong>商業マップ</strong>
+            </h1>
+
+            <p class="hero-text">
+                豊能町のお店を、もっと身近に。<br>
+                地域のお店や事業所を紹介する<br>
+                商業マップを制作します。
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#apply" class="button button-primary">
+                    掲載店舗として申し込む
+                </a>
+
+                <a href="#about" class="button button-secondary">
+                    商業マップについて
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 地図画像を後からここに入れられます -->
+
+        <div class="map-placeholder">
+
+            <div class="map-shape">
+
+                <div class="map-road road-1"></div>
+                <div class="map-road road-2"></div>
+                <div class="map-road road-3"></div>
+
+                <div class="map-pin pin-1">
+                    <span>店</span>
+                </div>
+
+                <div class="map-pin pin-2">
+                    <span>店</span>
+                </div>
+
+                <div class="map-pin pin-3">
+                    <span>店</span>
+                </div>
+
+                <div class="map-pin pin-4">
+                    <span>店</span>
+                </div>
+
+                <div class="map-label">
+                    <strong>TOYONO</strong>
+                    <small>COMMERCIAL MAP</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     商業マップとは
+========================= -->
+
+<section class="section" id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            豊能町商業マップとは？
+        </h2>
+
+        <p class="section-lead">
+            豊能町内のお店や事業所を一つのマップにまとめ、
+            地域の皆さまに「こんなお店があるんだ」と
+            知っていただくための商業マップです。
+        </p>
+
+        <div class="content-box">
+
+            <p>
+                豊能町には、飲食店、販売店、サービス業、
+                建設・製造業など、地域に根ざして活動する
+                多くの事業者があります。
+            </p>
+
+            <p>
+                今回の商業マップでは、そうした地域のお店を
+                分かりやすく紹介し、町内でのお買い物や
+                サービス利用につなげることを目指します。
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     掲載メリット
+========================= -->
+
+<section class="section" style="background:#f5f8f1;">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            掲載するメリット
+        </h2>
+
+        <p class="section-lead">
+            豊能町のお店を、地域の皆さまに知ってもらうきっかけに。
+        </p>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">📍</div>
+
+                <h3>
+                    地域のお客様にPR
+                </h3>
+
+                <p>
+                    豊能町内のお客様に、
+                    お店の存在や魅力を知ってもらう
+                    きっかけになります。
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🗺️</div>
+
+                <h3>
+                    マップで紹介
+                </h3>
+
+                <p>
+                    地図と店舗情報を組み合わせ、
+                    「近くのお店」を探す方に
+                    分かりやすく情報を届けます。
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">📣</div>
+
+                <h3>
+                    お店の魅力を発信
+                </h3>
+
+                <p>
+                    店舗PRやSNS・ホームページなど、
+                    お店の魅力を紹介することができます。
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     掲載内容
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            掲載内容
+        </h2>
+
+        <p class="section-lead">
+            以下のような情報を掲載する予定です。
+        </p>
+
+
+        <div class="content-box">
+
+            <ul class="content-list">
+
+                <li>店舗名・事業所名</li>
+
+                <li>業種</li>
+
+                <li>取扱商品・サービス</li>
+
+                <li>店舗PR</li>
+
+                <li>営業時間</li>
+
+                <li>定休日</li>
+
+                <li>SNS・ホームページ</li>
+
+                <li>その他店舗情報</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     掲載までの流れ
+========================= -->
+
+<section class="section" style="background:#fff8ed;">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            掲載までの流れ
+        </h2>
+
+        <p class="section-lead">
+            お申し込みから掲載まで、簡単な流れでご参加いただけます。
+        </p>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <h3>
+                    お申し込み
+                </h3>
+
+                <p>
+                    Googleフォームから
+                    必要事項を入力して
+                    お申し込みください。
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <h3>
+                    内容確認
+                </h3>
+
+                <p>
+                    商工会にて掲載内容を
+                    確認します。
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <h3>
+                    掲載
+                </h3>
+
+                <p>
+                    商業マップに
+                    店舗情報を掲載します。
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     募集要項
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            募集要項
+        </h2>
+
+        <p class="section-lead">
+            現時点での予定です。詳細は申込時にご確認ください。
+        </p>
+
+
+        <div class="requirements">
+
+            <dl>
+
+                <div>
+                    <dt>対象</dt>
+                    <dd>
+                        豊能町内の事業者・店舗等
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>掲載料</dt>
+                    <dd>
+                        無料
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>掲載方法</dt>
+                    <dd>
+                        商業マップへの店舗情報掲載
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>申込方法</dt>
+                    <dd>
+                        Googleフォーム
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>募集期間</dt>
+                    <dd>
+                        ○月○日まで
+                    </dd>
+                </div>
+
+            </dl>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     申込CTA
+========================= -->
+
+<section class="cta" id="apply">
 
     <h2>
-        豊能町のお店をもっと身近に。
+        豊能町のお店を<br>
+        一緒に紹介しませんか？
     </h2>
 
     <p>
-        豊能町商工会では、
-        豊能町内のお店や事業所を紹介する
-        商業マップを制作します。
+        商業マップへの掲載をご希望の事業者様は、
+        以下のボタンからお申し込みください。
     </p>
 
-    <p>
-        現在、掲載店舗を募集しています。
-    </p>
+    <!-- GoogleフォームのURLが決まったら
+         hrefを変更します -->
 
-    <a
-        href="#"
-        class="button"
-    >
-        掲載を申し込む
+    <a href="#"
+       class="button button-primary">
+        Googleフォームから申し込む
     </a>
 
-</main>
+</section>
 
+
+<!-- =========================
+     フッター
+========================= -->
 
 <footer>
 
-    豊能町商工会
+    <p>
+        豊能町商工会
+    </p>
+
+    <p class="small">
+        豊能町商業マップ
+    </p>
 
 </footer>
 
-</body>
 
+</body>
 </html>
